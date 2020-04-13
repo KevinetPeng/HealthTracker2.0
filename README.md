@@ -8,4 +8,4 @@ Planned features:
 
 Preview:
 
-![](src/HTSource/Images/Preview.png)
+![](src/HealthTrackerSource/Images/Preview.png)
