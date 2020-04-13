@@ -1,0 +1,96 @@
+#titleLabel {
+    -fx-font: 16px "Open Sans";
+    -fx-text-fill: #616f83;
+}
+
+.windowButton {
+    -fx-background-color: #1c333d;
+    -fx-background-radius: 0;
+}
+.windowButton:hover {
+    -fx-background-color: #395662;
+}
+.windowButton:pressed {
+    -fx-background-color: #4d6772;
+}
+
+.rightPane{
+    -fx-background-color: #edfaff;
+}
+
+.leftPane{
+    -fx-background-color: #2a9d8f;
+}
+
+.tabLabel{
+    -fx-font: 18px "Open Sans";
+    -fx-font-weight: bold;
+    -fx-background-color: #395662;
+    -fx-text-base-color: #ebf6f4;
+    -fx-rotate: 90;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.dataTable{
+    -fx-font: 18px "Open Sans";
+    -fx-background-color: #edfaff;
+}
+
+.dataTableLabels{
+    -fx-background-color: #d7dddf;
+    -fx-border-color: #b0b5b7 ;
+    -fx-border-width: 1 ;
+    -fx-border-style: none solid none none;
+}
+
+.tabLabel:hover{
+    -fx-background-color: #4d6772;
+}
+.tabLabel:pressed{
+    -fx-background-color: #566e7f;
+}
+
+#tabLabelDailyEntry{
+    -fx-padding: 60 20 60 20;
+}
+
+#tabLabelTracking{
+    -fx-padding: 60 29 60 29;
+}
+
+#tabLabelVisualization{
+    -fx-padding: 60 12 60 12;
+}
+
+.leftTab *.tab-header-background {
+    -fx-background-color: #395662;
+    -fx-text-base-color: #b1dbd6;
+}
+.sliders{
+    -fx-focus-color: #19525b;
+    -fx-faint-focus-color: transparent;
+}
+
+.entryLabels{
+    -fx-font: 16px "Open Sans";
+    -fx-text-fill: #334156;
+}
+
+.textArea{
+    -fx-focus-color: #19525b;
+}
+
+.submitButton {
+    -fx-background-color: #395662;
+    -fx-background-radius: 0;
+    -fx-font: 18px "Open Sans";
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.submitButton:hover {
+    -fx-background-color: #4d6772;
+}
+.submitButton:pressed {
+    -fx-background-color: #617881;
+}

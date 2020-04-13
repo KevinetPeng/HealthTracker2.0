@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthTrackerSource.Classes.Controller">
+   <children>
+      <Pane layoutY="29.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="rightPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="464.0" prefWidth="800.0" side="LEFT" styleClass="leftTab" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab id="tabLabelDailyEntry" closable="false" styleClass="tabLabel" text="Daily Entry">
+                  <content>
+                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="517.0">
+                           <children>
+                              <Slider fx:id="mentalSlider" blockIncrement="1.0" layoutX="228.0" layoutY="67.0" majorTickUnit="1.0" max="10.0" maxWidth="1.7976931348623157E308" minorTickCount="0" prefHeight="30.0" prefWidth="350.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="sliders" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="67.0">
+                                 <cursor>
+                                    <Cursor fx:constant="H_RESIZE" />
+                                 </cursor></Slider>
+                              <Slider fx:id="physicalSlider" blockIncrement="1.0" layoutX="228.0" layoutY="147.0" majorTickUnit="1.0" max="10.0" maxWidth="1.7976931348623157E308" minorTickCount="0" prefHeight="30.0" prefWidth="350.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="sliders" AnchorPane.rightAnchor="85.0">
+                                 <cursor>
+                                    <Cursor fx:constant="H_RESIZE" />
+                                 </cursor></Slider>
+                              <Slider fx:id="happySlider" blockIncrement="1.0" layoutX="228.0" layoutY="229.0" majorTickUnit="1.0" max="10.0" maxWidth="1.7976931348623157E308" minorTickCount="0" prefHeight="30.0" prefWidth="350.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="sliders" AnchorPane.rightAnchor="85.0">
+                                 <cursor>
+                                    <Cursor fx:constant="H_RESIZE" />
+                                 </cursor></Slider>
+                              <TextArea fx:id="commentBox" layoutX="74.0" layoutY="315.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="89.0" prefWidth="383.0" styleClass="textArea" wrapText="true" AnchorPane.leftAnchor="75.0" />
+                              <Button layoutX="491.0" layoutY="335.0" mnemonicParsing="false" onAction="#enterInfo" prefHeight="50.0" prefWidth="87.0" styleClass="submitButton" text="Submit" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Label layoutX="74.0" layoutY="55.0" styleClass="entryLabels" text="Mental Health:" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="55.0" />
+                              <Label layoutX="74.0" layoutY="217.0" styleClass="entryLabels" text="Overall Happiness:" AnchorPane.leftAnchor="75.0" />
+                              <Label layoutX="74.0" layoutY="135.0" styleClass="entryLabels" text="Physical Health:" AnchorPane.leftAnchor="75.0" />
+                              <Label layoutX="74.0" layoutY="290.0" styleClass="entryLabels" text="Comments:" AnchorPane.leftAnchor="75.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab id="tabLabelTracking" closable="false" styleClass="tabLabel" text="Tracking">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="388.0">
+                           <children>
+                              <TableView fx:id="dataTable" prefHeight="206.0" prefWidth="411.0" styleClass="dataTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="dateColumn" editable="false" prefWidth="150.0" resizable="false" sortType="DESCENDING" styleClass="dataTableLabels" text="Date" />
+                                  <TableColumn fx:id="mentalColumn" editable="false" maxWidth="12080.0" minWidth="29.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Mental" />
+                                    <TableColumn fx:id="physicalColumn" editable="false" maxWidth="102.0" minWidth="59.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Physical" />
+                                    <TableColumn fx:id="happinessColumn" editable="false" maxWidth="115.0" minWidth="58.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Happiness" />
+                                    <TableColumn fx:id="commentsColumn" editable="false" prefWidth="194.0" resizable="false" styleClass="dataTableLabels" text="Comments" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab id="tabLabelVisualization" closable="false" styleClass="tabLabel" text="Visualization">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="422.0">
+                           <children>
+                              <LineChart layoutX="53.0" layoutY="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>
+      <Pane layoutY="488.0" maxWidth="1.7976931348623157E308" prefHeight="10.0" prefWidth="800.0" style="-fx-background-color: #1c333d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox fx:id="windowBar" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" onMouseDragged="#dragWindowMove" onMousePressed="#startWindowMove" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #1c333d;" stylesheets="@Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="titleLabel" prefHeight="25.0" prefWidth="715.0" text="HEALTH TRACKER 1.0" textFill="#bedde8" />
+            <Button id="windowButton" fx:id="minimizeButton" contentDisplay="CENTER" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="28.0" prefWidth="40.0" styleClass="windowButton" text="_" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button id="windowButton" fx:id="closeButton" contentDisplay="CENTER" graphicTextGap="1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeApp" prefHeight="28.0" prefWidth="40.0" styleClass="windowButton" text="X" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   
+</AnchorPane>
