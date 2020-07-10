@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -173,6 +174,9 @@ public class Controller {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //refresh tableView
+        dataTable.refresh();
     }
 }
 

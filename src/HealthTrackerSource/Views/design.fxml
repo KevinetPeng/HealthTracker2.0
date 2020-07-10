@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.shape.*?>
-<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -58,21 +54,6 @@
                            </children></AnchorPane>
                   </content>
                 </Tab>
-                  <Tab id="tabLabelVisualization" closable="false" styleClass="tabLabel" text="Visualization">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="422.0">
-                           <children>
-                              <LineChart layoutX="53.0" layoutY="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
-                                <xAxis>
-                                  <CategoryAxis side="BOTTOM" />
-                                </xAxis>
-                                <yAxis>
-                                  <NumberAxis side="LEFT" />
-                                </yAxis>
-                              </LineChart>
-                           </children></AnchorPane>
-                    </content>
-                  </Tab>
               </tabs>
             </TabPane>
          </children></Pane>
