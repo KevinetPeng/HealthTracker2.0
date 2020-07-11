@@ -55,6 +55,7 @@ public class Controller {
                 tableData.add(new DataEntry(key, "", val.get(0).intValue(), val.get(1).intValue(), val.get(2).intValue()));
             else
                 tableData.add(new DataEntry(key, dataMap.dailyComment.get(key), val.get(0).intValue(), val.get(1).intValue(), val.get(2).intValue()));
+
         }
 
         //create cell value factory for each column in table
@@ -175,8 +176,13 @@ public class Controller {
             e.printStackTrace();
         }
 
+        //System.out.println(tableData.removeIf(o -> o.date == dataMap.date.getDateString()));
+
+        tableData.add(new DataEntry(dataMap.date.getDateString(), commentBox.getText(), (int)mentalSlider.getValue(), (int)physicalSlider.getValue(), (int)happySlider.getValue()));
+
         //refresh tableView
         dataTable.refresh();
+        dataTable.sort();
     }
 }
 

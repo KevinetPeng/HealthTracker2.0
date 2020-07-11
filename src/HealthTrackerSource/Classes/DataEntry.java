@@ -9,17 +9,19 @@ The DataEntry class is a static class that corresponds to the individual data fo
 
 import javafx.beans.property.SimpleStringProperty;
 
+import javax.xml.crypto.Data;
+
 public class DataEntry {
-    SimpleStringProperty date;
-    SimpleStringProperty comment;
+    String date;
+    String comment;
     int mentalNum;
     int physicalNum;
     int happinessNum;
 
     //constructor
     DataEntry(String date, String comment, int mentalNum, int physicalNum, int happinessNum){
-        this.date = new SimpleStringProperty(date);
-        this.comment = new SimpleStringProperty(comment);
+        this.date = date;
+        this.comment = comment;
         this.mentalNum = mentalNum;
         this.physicalNum = physicalNum;
         this.happinessNum = happinessNum;
@@ -28,18 +30,18 @@ public class DataEntry {
 
     //getter and setter for date
     public String getDate(){
-        return date.get();
+        return date;
     }
     public void setDate(String newDate){
-        date.set(newDate);
+        date = newDate;
     }
 
     //getter and setter for comment
     public String getComment(){
-        return comment.get();
+        return comment;
     }
     public void setComment(String newComment){
-        comment.set(newComment);
+        comment = newComment;
     }
 
     //getter and setter for mentalNum
@@ -64,6 +66,12 @@ public class DataEntry {
     }
     public void setHappinessNum(int newHappinessNum) {
         this.happinessNum = newHappinessNum;
+    }
+
+    //equals boolean
+    public boolean equals(Object obj) {
+        DataEntry o = (DataEntry) obj;
+        return o.date == this.date;
     }
 
 }

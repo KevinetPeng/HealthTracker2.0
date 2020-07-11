@@ -18,7 +18,7 @@ public class DataSheet {
     public HashMap<String, String> dailyComment;
 
     //declare date object
-    private Time date;
+    public Time date;
 
     //declare gson object
     Gson gson;
