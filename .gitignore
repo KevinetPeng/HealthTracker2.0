@@ -60,3 +60,4 @@ crashlytics.properties
 crashlytics-build.properties
 
 # HealthTracker specific:
+/data/
