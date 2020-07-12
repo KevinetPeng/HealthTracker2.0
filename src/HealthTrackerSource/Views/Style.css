@@ -38,8 +38,8 @@
 }
 
 .dataTableLabels{
-    -fx-background-color: #d7dddf;
-    -fx-border-color: #b0b5b7 ;
+    -fx-background-color: #edfaff;
+    -fx-border-color: #4d6772;
     -fx-border-width: 1 ;
     -fx-border-style: none solid none none;
 }

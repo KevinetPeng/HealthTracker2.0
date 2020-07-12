@@ -176,8 +176,10 @@ public class Controller {
             e.printStackTrace();
         }
 
-        //System.out.println(tableData.removeIf(o -> o.date == dataMap.date.getDateString()));
+        //Remove previous instance (DataEntry) of today's date from tableData
+        tableData.removeIf(o -> (o.getDate().equals(dataMap.date.getDateString())));
 
+        //Add today's date and data entry into tableData as a DataEntry instance
         tableData.add(new DataEntry(dataMap.date.getDateString(), commentBox.getText(), (int)mentalSlider.getValue(), (int)physicalSlider.getValue(), (int)happySlider.getValue()));
 
         //refresh tableView

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -44,11 +46,11 @@
                            <children>
                               <TableView fx:id="dataTable" prefHeight="206.0" prefWidth="411.0" styleClass="dataTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn fx:id="dateColumn" editable="false" prefWidth="150.0" resizable="false" sortType="DESCENDING" styleClass="dataTableLabels" text="Date" />
-                                  <TableColumn fx:id="mentalColumn" editable="false" maxWidth="12080.0" minWidth="29.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Mental" />
-                                    <TableColumn fx:id="physicalColumn" editable="false" maxWidth="102.0" minWidth="59.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Physical" />
-                                    <TableColumn fx:id="happinessColumn" editable="false" maxWidth="115.0" minWidth="58.0" prefWidth="100.0" resizable="false" styleClass="dataTableLabels" text="Happiness" />
-                                    <TableColumn fx:id="commentsColumn" editable="false" prefWidth="194.0" resizable="false" styleClass="dataTableLabels" text="Comments" />
+                                  <TableColumn fx:id="dateColumn" editable="false" prefWidth="116.0" resizable="false" sortType="DESCENDING" styleClass="dataTableLabels" text="Date" />
+                                  <TableColumn fx:id="mentalColumn" editable="false" maxWidth="12080.0" minWidth="29.0" prefWidth="78.0" resizable="false" styleClass="dataTableLabels" text="Mental" />
+                                    <TableColumn fx:id="physicalColumn" editable="false" maxWidth="145.0" minWidth="59.0" prefWidth="81.0" resizable="false" styleClass="dataTableLabels" text="Physical" />
+                                    <TableColumn fx:id="happinessColumn" editable="false" maxWidth="165.0" minWidth="58.0" prefWidth="103.0" resizable="false" styleClass="dataTableLabels" text="Happiness" />
+                                    <TableColumn fx:id="commentsColumn" editable="false" prefWidth="266.0" resizable="false" styleClass="dataTableLabels" text="Comments" />
                                 </columns>
                               </TableView>
                            </children></AnchorPane>
@@ -60,7 +62,7 @@
       <Pane layoutY="488.0" maxWidth="1.7976931348623157E308" prefHeight="10.0" prefWidth="800.0" style="-fx-background-color: #1c333d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox fx:id="windowBar" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" onMouseDragged="#dragWindowMove" onMousePressed="#startWindowMove" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #1c333d;" stylesheets="@Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="titleLabel" prefHeight="25.0" prefWidth="715.0" text="HEALTH TRACKER 1.0" textFill="#bedde8" />
+            <Label id="titleLabel" prefHeight="25.0" prefWidth="715.0" text="HEALTH TRACKER 2.0" textFill="#bedde8" />
             <Button id="windowButton" fx:id="minimizeButton" contentDisplay="CENTER" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="28.0" prefWidth="40.0" styleClass="windowButton" text="_" textAlignment="CENTER" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
