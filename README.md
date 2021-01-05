@@ -12,4 +12,4 @@ Built with JavaFX
 ![](src/HealthTrackerSource/Images/Preview.png)
 
 # From the Author
-This was a fun project that helped me learn JavaFX and MVC UI design principles.
+This was a fun project that I used as a hands on way to Java, OOP, and MVC design principles.
